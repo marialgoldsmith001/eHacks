@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -9,6 +9,7 @@
           left:200px
         }*/
     </style>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,16 +60,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">Temperatures</a>
+                        <a class="page-scroll" href="#about">Temperatures and news</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Responsibilities</a>
+                        <a class="page-scroll" href="#services">Things to do</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Grocery List</a>
+                        <a class="page-scroll" href="#portfolio">Contact your monster</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Grocery List</a>
                     </li>
                 </ul>
             </div>
@@ -81,38 +82,40 @@
 
     <div id="row">
         <div class="col-md-3"></div> 
-        <div class="col-md-3" style="top:200px">
+        <div class="col-md-3" style="top:180px">
+            <center>
             <table>
-              <tr>
-                <td>
+                <!--arrow forward-->
+                <tr>
+                    <td>
             
-                </td>
-                <td>
-                  <a id = "up" href="http://10.0.0.32/?forward">
-                    <img src= "http://s29.postimg.org/uf15iuu8j/image.png"width=100px height="80px"/>
-                  </a>
-                </td>
-                <td>
-            
-                </td>
-              </tr>
+                    </td>
+                    <td>
+                        <a id = "up" href="http://10.0.0.32/?forward">
+                            <img src= "img/up.png"width=100px height="80px" align="center"/>
+                        </a>
+                    </td>
+                    <td>
+                
+                    </td>
+                </tr>
               <!-- arrow left -->
               <tr>
                 <td>
                   <a id = "left" href="http://10.0.0.32/?left">
-                    <img  src= "http://s12.postimg.org/t0ut9ulzd/left.png"width="80px" height="100px"/>
+                    <img  src= "img/left.png"width="80px" height="100px" align="center"/>
                   </a>
                 </td>
                 <!-- stop button -->
                 <td>
                   <a href="http://10.0.0.32/?stop">
-                    <center><img src= "http://2.bp.blogspot.com/_HyyDHyAwI6k/TEeRH6WdxaI/AAAAAAAAJ3w/nDTLbbKHBKg/s1600/pause+button.png"width=80px height=80px/></center>
+                    <center><img src= "img/pause.png"width="80px" height="80px"/></center>
                   </a>
                 </td>
                 <!-- arrow right -->
                 <td>
                   <a id = "right" href="http://10.0.0.32/?right">
-                    <img src= "http://s1.postimg.org/xz14c3th7/right.png"width="80px" height="100px"/>
+                    <img src= "img/right.png"width="80px" height="100px" align="center"/>
                   </a>
                 </td>
               </tr>
@@ -124,7 +127,7 @@
                 <td>
                   <a id="down" href="http://10.0.0.32/?down">
             
-                    <img src= "http://s8.postimg.org/726p04j0x/down.png"width=100px height="80px"/>
+                    <img src= "img/down.png"width=100px height="80px" align="center"/>
                   </a>
                 </td>
                 <td>
@@ -132,6 +135,12 @@
                 </td>
               </tr>
             </table>
+            </center>
+            <center>
+                <a id="down" href="http://10.0.0.32/?down">
+                    <img src= "img/refresh.png"width=120px height="40px" align="center"/>
+                </a>
+            </center>
         </div>
         <div class="col-md-6" align="right" style="top:150px">
         <iframe class="embed-responsive-item" src="http://10.0.0.41:7777/monitor.asp" height=400 width=100%></iframe>
@@ -141,22 +150,23 @@
 
     <section class="bg-primary" id="about">
         <div class="container">
+            <div class="prow">
+                <h2 class="section-heading" align="center">This is your home!</h2>
+                <hr class="light">
+            </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <h2 class="section-heading" align="center">This is your home!</h2>
                     <img src="img/portfolio/home.jpg" class="img-responsive" alt="" align="center">
-                    <hr class="light">
                     <!--<a href="#" class="btn btn-default btn-xl"></a>-->
                 </div>
                 <div class="col-lg-6">
-                    <h1>
                         </br>
-                            <li>1~></li>
-                            <li>2~></li>
-                            <li>3~></li>
-                            <li>4~></li>
+                        <li><h4><strong>Room 1</strong></h4> <h4>Temperature: <?= $_GET["temp"]?> Light: <? echo $GET["light"] ? 'On' : 'Off'?></h4></li>
+                        <li><h4><strong>Room 2</strong></h4> <h4>Temperature: <?= $_GET["temp"]?> Light: <? echo $GET["light"] ? 'On' : 'Off'?></h4></li>
+                        <li><h4><strong>Room 3</strong></h4> <h4>Temperature: <?= $_GET["temp"]?> Light: <? echo $GET["light"] ? 'On' : 'Off'?></h4></li>
+                        <li><h4><strong>Room 4</strong></h4> <h4>Temperature: <?= $_GET["temp"]?> Light: <? echo $GET["light"] ? 'On' : 'Off'?></h4></li>
+                        <li><h4><strong>Room 5</strong></h4> <h4>Temperature: <?= $_GET["temp"]?> Light: <? echo $GET["light"] ? 'On' : 'Off'?></h4></li>
 
-                    </h1>
                 </div>
             </div>
         </div>
@@ -166,8 +176,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading">Well, Happy Sunday!</h2>
                     <hr class="primary">
+                    <h4>Things monsters must do today:</h4>
                 </div>
             </div>
         </div>
@@ -175,124 +186,74 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                        <i class="fa fa-4x fa-trash wow bounceIn text-primary"></i>
+                        <h3>Stinky!!</h3>
+                        <p class="text-muted">Remember to take out the garbage</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
+                        <i class="fa fa-4x fa-home wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Rent is due tomorrow</h3>
+                        <p class="text-muted">Remember to submit the check to Linda's account</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
+                        <h3>Love and be loved</h3>
+                        <p class="text-muted">Remember to smile more today!</p>
                     </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <?php if($_GET["mailbox"] == "true"): ?>
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Up to Date</h3>
+                        <p class="text-muted">We have new mail in the mailbox</p>
+                    </div>
+                    <?php else:?>
+                    <div class="service-box">
+                    </div>
+                    <?php endif;?>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="no-padding" id="portfolio">
+    <section class="bg-primary" id="portfolio">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+            <h2 class="section-heading" align="center">Let's get in touch!</h2>
+            <hr class="light">
+        </div>
         <div class="container-fluid">
             <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-6" align="center">
                     <a href="#" class="portfolio-box">
                         <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Missunderstood monster!!
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Send me a text message<3
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-6" align="center">
                     <a href="#" class="portfolio-box">
                         <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Missunderstood monster!
                                 </div>
                                 <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
+                                    Send me a text message <3
                                 </div>
                             </div>
                         </div>
@@ -301,32 +262,32 @@
             </div>
         </div>
     </section>
-
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
-            </div>
-        </div>
-    </aside>
-
+    
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <h2 class="section-heading">What about the grocery?</h2>
                     <hr class="primary">
-                    <p></p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p></p>
+            </div>
+            <div class=row2>
+                <div class="col-lg-4">
+                    <h4>Need to add anything to the list?</h4><input type="text"></input>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com"></a></p>
+                <div class="col-lg-8">
+                    <form action="/controller/ShoppingList.php" method=post>
+                        <div class="col-sm-6">
+                            <h4><input type="checkbox" name="Bread">Bread</input></h4>
+                            <h4><input type="checkbox" name="Apples">Apples</input></h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4><input type="checkbox" name="Rice">Rice</input></h4>
+                            <h4><input type="checkbox" name="Juice">Juice</input></h4>
+                        </div>  
+                    </form>
                 </div>
+            </div>
             </div>
         </div>
     </section>
